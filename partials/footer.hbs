@@ -1,4 +1,69 @@
-<footer class="site-footer">
+
+<div class=" dope-bg-gray-900">
+    <div class="dope-grid md:dope-grid-cols-3 dope-gap-10 dope-px-4 dope-grid-cols-1 dope-py-8 dope-max-w-6xl dope-mx-auto">
+        {{#get "posts" include="authors" limit="3" as |more_posts|}}
+            {{#if more_posts}}
+            {{#foreach more_posts}}
+                <article>
+                    <a href="{{ url }}">
+                        <img class="dope-w-full" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w,
+                            {{img_url feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
+                            sizes="(max-width: 1000px) 400px, 800px" src="{{img_url feature_image size=" m"}}"
+                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" loading="lazy" alt="{{ title }}">
+                    </a>
+                    
+                    <h2 class="dope-py-3">
+                        <a href="{{url}}" class=" dope-text-white dope-text-xl">{{title}}</a>
+                    </h2>
+                    <p class="dope-text-gray-400">
+                        {{{excerpt}}}
+                    </p>
+                </article>
+            {{/foreach}}
+            {{/if}}
+        {{/get}}
+    </div>
+    
+    
+    <div class=" dope-text-center dope-text-white dope-py-10">
+        <div>
+            <p>Powered by <a href="#">Ghost</a></p>
+            <div>
+                {{#if @site.facebook}}
+                <a class="footer-social-item" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener noreferrer">
+                    <i class="icon icon-facebook dope-text-gray-500"></i>
+                </a>
+                {{/if}}
+            
+                {{#if @site.twitter}}
+                <a class="footer-social-item" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener noreferrer">
+                    <i class="icon icon-twitter dope-text-gray-500"></i>
+                </a>
+                {{/if}}
+            
+                <a class="footer-social-item footer-social-item-rss dope-text-gray-500"
+                    href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener noreferrer">
+                    <i class="icon icon-rss dope-text-gray-500"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <footer class="site-footer">
     <div class="copyright">
         Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
     </div>
@@ -22,4 +87,4 @@
             <i class="icon icon-rss"></i>
         </a>
     </div>
-</footer>
+</footer> --}}
