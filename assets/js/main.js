@@ -25,7 +25,7 @@ document.addEventListener('lazyloaded', function (e) {
 });
 
 function tagFeed() {
-    'use strict';
+    ('use strict');
     $('.tag-feed').owlCarousel({
         dots: false,
         nav: true,
@@ -37,17 +37,31 @@ function tagFeed() {
             768: {
                 items: 2,
             },
-            1200: {
-                items: 3,
-            },
-            1920: {
-                items: 4,
-            },
-            2560: {
-                items: 5,
-            },
+            // 1200: {
+            //     items: 3,
+            // },
+            // 1920: {
+            //     items: 4,
+            // },
+            // 2560: {
+            //     items: 5,
+            // },
         },
     });
+    // owl-stage
+
+    function myFunction(x) {
+        if (x.matches) {
+        }
+        const itemsCount = $('.owl-stage').children().length;
+        const items = $('.owl-stage').children();
+
+        items.css('width', 100 / itemsCount + '%');
+    }
+
+    var x = window.matchMedia('(max-width: 700px)');
+    myFunction(x); // Call listener function at run time
+    x.addListener(myFunction); // Attach listener function on state changes
 }
 
 function loadMore() {
