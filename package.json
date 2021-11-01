@@ -41,6 +41,7 @@
         }
     },
     "scripts": {
+        "dev:tw": "tailwindcss -i assets/theme.src.css -o assets/theme.dist.css --watch",
         "dev": "gulp",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
@@ -64,6 +65,7 @@
         "pump": "3.0.0",
         "stylelint": "14.0.1",
         "stylelint-config-standard": "23.0.0",
-        "stylelint-order": "5.0.0"
+        "stylelint-order": "5.0.0",
+        "tailwindcss": "^2.2.19"
     }
 }
