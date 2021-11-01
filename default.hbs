@@ -10,13 +10,22 @@
 
     <link rel="stylesheet" href="{{asset "theme.dist.css"}}">
     {{{block "styles"}}}
-
     {{ghost_head}}
+
+
+    <style>
+        .internal-header-wrapper{
+            clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+        }
+    </style>
 </head>
 
 <body class="{{body_class}}">
     <div class="site">
-        {{> header}}
+        {{^is "home"}}
+            {{> header}}
+        {{/is}}
+
         <div class="site-content">
             {{{body}}}
         </div>

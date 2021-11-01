@@ -1,6 +1,15 @@
 {{!< default}}
 
-<div class="content-area">
+{{#contentFor "styles"}}
+<style>
+    .site-content {
+        padding: 0;
+    }
+</style>
+{{/contentFor}}
+
+
+<div class="content-area dope--mt-4">
     <main class="site-main">
         {{#post}}
             <article
