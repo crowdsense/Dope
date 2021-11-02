@@ -11,3 +11,15 @@
 .secondary-menu > .nav-list.u-plain-list a {
     @apply dope-text-gray-400 hover:dope-text-gray-500;
 }
+
+.post-tag {
+    @apply dope-text-gray-700;
+}
+
+.share-item:hover {
+    @apply dope-bg-gray-300 dope-text-gray-700;
+}
+
+.u-text-format a {
+    @apply dope-text-gray-700;
+}

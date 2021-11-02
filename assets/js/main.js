@@ -116,7 +116,7 @@ function author() {
 
 function offCanvas() {
     'use strict';
-    var burger = jQuery('.burger');
+    var burger = jQuery('.mobile-menu-triggerer');
     var canvasClose = jQuery('.canvas-close');
 
     burger.on('click', function () {
