@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.secondary-menu > .nav-list.u-plain-list {
+    @apply dope-list-none;
+    @apply dope-flex dope-items-center;
+    @apply dope-space-x-3;
+}
+
+.secondary-menu > .nav-list.u-plain-list a {
+    @apply dope-text-gray-400 hover:dope-text-gray-500;
+}
