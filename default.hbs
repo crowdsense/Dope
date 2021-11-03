@@ -16,7 +16,7 @@
     <style>
         .internal-header-wrapper{
             clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
-            background-color: var(--ghost-accent-color)
+            background-color: white;
         }
 
         .accent-bg{
@@ -24,12 +24,13 @@
         }
 
         .accent-text{
-            background-color: var(--ghost-accent-color);
+            color: var(--ghost-accent-color);
         }
     </style>
 </head>
 
 <body class="{{body_class}}">
+    {{> menu}}
     <div class="site">
         {{^is "home"}}
             {{> header}}

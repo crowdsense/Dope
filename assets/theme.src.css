@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Gilroy";
+    font-weight: bold;
+    font-style: normal;
+    src: url("fonts/Gilroy-ExtraBold.woff") format("woff"),
+        url("fonts/Gilroy-ExtraBold.woff2") format("woff2");
+    font-display: swap;
+}
+
 .secondary-menu > .nav-list.u-plain-list {
     @apply dope-list-none;
     @apply dope-flex dope-items-center;
@@ -12,9 +21,9 @@
     @apply dope-text-gray-400 hover:dope-text-gray-500;
 }
 
-.post-tag {
+/* .post-tag {
     @apply dope-text-gray-700;
-}
+} */
 
 .share-item:hover {
     @apply dope-bg-gray-300 dope-text-gray-700;
@@ -22,4 +31,8 @@
 
 .u-text-format a {
     @apply dope-text-gray-700;
+}
+
+h1.title {
+    font-family: "Gilroy";
 }
