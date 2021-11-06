@@ -1,0 +1,26 @@
+{{!< default}}
+
+
+<div class=" dope-w-[95%] dope-px-6 dope-mx-auto dope-pt-10 dope-pb-10 lg:dope-pb-0">
+    <div class=" lg:dope-grid-cols-12 dope-grid-cols-1 dope-grid dope-gap-20">
+        <div class=" dope-col-span-5 dope-flex dope-flex-col dope-justify-center dope-space-y-6">
+            <h1 class="dope-font-Gilroy dope-text-6xl dope-font-bold dope-text-gray-800">
+                <a href="{{@site.url}}" class="accent-text">
+                    {{@site.title}}
+                </a>
+            </h1>
+            <p class="dope-text-3xl dope-font-semibold dope-text-gray-700">
+                {{@site.description}}
+            </p>
+            
+            <div class=" dope-prose">
+                {{{ page.html }}}
+            </div>
+
+
+        </div>
+        <div class=" dope-col-span-7 dope-hidden lg:dope-block dope-self-end">
+            <img src="{{ page.feature_image }}" alt="{{ page.feature_image_alt }}" />
+        </div>
+    </div>
+</div>

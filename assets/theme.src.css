@@ -36,3 +36,8 @@
 h1.title {
     font-family: "Gilroy";
 }
+
+.button {
+    @apply !dope-text-white dope-font-semibold dope-px-4 dope-py-2 dope-rounded-md dope-w-max !dope-no-underline;
+    background-color: var(--ghost-accent-color);
+}

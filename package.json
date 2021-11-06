@@ -41,7 +41,7 @@
         }
     },
     "scripts": {
-        "dev:tw": "tailwindcss -i assets/theme.src.css -o assets/theme.dist.css --watch",
+        "dev:tw": "tailwindcss -i assets/theme.src.css -o assets/theme.dist.css --watch --minify",
         "dev": "gulp",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
@@ -49,6 +49,7 @@
         "zip": "gulp zip"
     },
     "devDependencies": {
+        "@tailwindcss/typography": "^0.4.1",
         "autoprefixer": "10.4.0",
         "beeper": "2.1.0",
         "cssnano": "5.0.8",
