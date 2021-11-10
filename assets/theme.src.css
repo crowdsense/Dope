@@ -41,3 +41,11 @@ h1.title {
     @apply !dope-text-white dope-font-semibold dope-px-4 dope-py-2 dope-rounded-md dope-w-max !dope-no-underline;
     background-color: var(--ghost-accent-color);
 }
+
+.custom-hero-content.dope-prose ul > li:before {
+    height: 18px;
+    width: 18px;
+    top: 5px;
+    left: 0;
+    background-color: var(--ghost-accent-color);
+}
